@@ -1,17 +1,11 @@
 import unittest
 import tkinter as tk
 from tkinter import ttk
-from helper.button_functions import clear
+import helpers.button_functions as button_functions
 
 # Funktion für den Button 'Convert'
 def convert():
     output_label.config(text="Converted Value", fg="white", bg="#2c3e50")
-
-# Funktion für den Button 'Clear'
-def clear():
-    output_label.config(text="", fg="black", bg="white")
-    input_entry.delete(0, tk.END)
-    selected_option.set(options[0])
 
 # Testklasse für die GUI-Funktionen
 class TestGUIFunctions(unittest.TestCase):
@@ -20,7 +14,7 @@ class TestGUIFunctions(unittest.TestCase):
         global root, output_label, input_entry, selected_option, options
         
         root = tk.Tk()
-        root.title("GUI Beispiel")
+        root.title("GUI example")
         root.geometry("450x350")
         root.configure(bg="#34495e")
 
@@ -58,7 +52,7 @@ class TestGUIFunctions(unittest.TestCase):
         selected_option.set(options[1])
         
         # Call clear function
-        clear()
+        button_functions.clear(output_label, input_entry, selected_option, options)
 
         # Check if fields are cleared
         self.assertEqual(output_label.cget("text"), "")
