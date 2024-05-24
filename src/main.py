@@ -1,15 +1,10 @@
 import tkinter as tk
 from tkinter import ttk
+from helper.button_functions import clear
 
 # Funktion für den Button 'Convert'
 def convert():
     output_label.config(text="Converted Value", fg="white", bg="#2c3e50")
-
-# Funktion für den Button 'Clear'
-def clear():
-    output_label.config(text="", fg="black", bg="white")
-    input_entry.delete(0, tk.END)
-    selected_option.set(options[0])
 
 # Hauptfenster
 root = tk.Tk()

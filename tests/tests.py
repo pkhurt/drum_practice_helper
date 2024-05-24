@@ -1,6 +1,7 @@
 import unittest
 import tkinter as tk
 from tkinter import ttk
+from helper.button_functions import clear
 
 # Funktion für den Button 'Convert'
 def convert():
