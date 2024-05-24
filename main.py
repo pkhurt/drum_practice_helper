@@ -2,8 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 import helpers.button_functions as button_functions
 
-def convert():
-    output_label.config(text="Converted Value", fg="white", bg="#2c3e50")
+
 
 root = tk.Tk()
 root.title("GUI Beispiel")
@@ -28,7 +27,7 @@ button_frame = tk.Frame(root, bg="#34495e")
 button_frame.pack(side=tk.LEFT, padx=20)
 
 # Convert Button
-convert_button = ttk.Button(button_frame, text="Convert", command=convert)
+convert_button = ttk.Button(button_frame, text="Convert", command= lambda: button_functions.convert(output_label))
 convert_button.pack(pady=5)
 
 # Frame für Eingabe und Dropdown
