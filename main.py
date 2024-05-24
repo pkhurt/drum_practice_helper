@@ -49,9 +49,9 @@ dropdown_label.pack(pady=5)
 # Dropdown Menü
 options = ["8th", "16th"]
 selected_option = tk.StringVar()
-dropdown_menu = ttk.Combobox(input_frame, textvariable=selected_option, state="readonly")
-dropdown_menu['values'] = options
-dropdown_menu.pack()
+number_of_bars = ttk.Combobox(input_frame, textvariable=selected_option, state="readonly")
+number_of_bars['values'] = options
+number_of_bars.pack()
 
 # Set initial values
 selected_option.set(options[0])
